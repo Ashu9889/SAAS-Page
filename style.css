@@ -23,9 +23,9 @@ header{
 .nav-bar{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   padding: 30px;
-
-  /* width: 100%; */
 }
 
 .logo img{
@@ -33,14 +33,14 @@ header{
 }
 
 .nav-menu{
-  margin-left: 60%;
-  margin-top: 10px;
-  margin-right: 15px;
+ flex-grow: 1;
 }
 
 .list{
   list-style-type: none;
-  
+  float: right;
+  padding-inline: 20px;
+
 
 }
 .list-item{
@@ -49,6 +49,10 @@ header{
   font-size: 13px;
   padding: 0px 10px ;
 
+}
+.ham{
+  width: 30px;
+  display: none;
 }
 
 .active-item{
@@ -81,13 +85,13 @@ header{
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 10%;
+  gap: 5%;
   padding-bottom: 30px;
 }
 
 .top-section .left-section{
 
-  width: 30%;
+  width: 40%;
 
 }
 
@@ -95,17 +99,19 @@ header{
   color: white;
   font-size: 3rem;
   padding-bottom: 20px;
-
+  width: 75%;
 }
 .top-section .left-section p{
   color: white;
   font-size: 1rem;
-  text-align: justify;
-  font-size: 13px;
+  width: 75%;
+}
+.top-section .right-section{
+  width: 40%;
 }
 .top-section .right-section img{ 
-
-  width: 35rem;
+ width: 100%;
+ height: 100%;
 }
 
 .middle-section{
@@ -114,12 +120,23 @@ header{
   justify-content: center;
   align-items: center;
   gap: 10%;
-  padding-bottom: 30px;
+  padding-block: 30px;
 }
+
+
+
+.middle-section .left-section{
+  width: 40%;
+}
+.middle-section .left-section img{ 
+  width: 100%;
+  height: 100%;
+}
+
 
 .middle-section .right-section{
 
-  width: 35%;
+  width: 45%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -129,37 +146,31 @@ header{
 .middle-section .right-section h1{
   
   font-size: 2rem;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 
 }
 
 
-.p{
+.point{
   display: flex;
-  /* flex-wrap: wrap; */
   flex-direction: row;
+  margin-block: 20px;
   
 }
-.middle-section .left-section img{ 
 
-  width: 35rem;
-}
-
-.middle-section .right-section .p{
-  margin-bottom: 20px;
-}
-.p div{
+.point div{
  margin-left: 10px;
- text-align: justify;
+ /* text-align: justify; */
 
 }
 
-.p div h4{
+.point div h4{
   padding-bottom: 10px;
 }
 
-.p div p{
+.point div p{
   font-size: 13px;
+  width: 80%;
 }
 .footer{
   
@@ -177,12 +188,14 @@ footer h1{
   justify-content: center;
   align-content: center;
   padding-bottom: 5%;
+  gap: 30px;
+ 
 }
 .card{
-  width: 15%;
-  height: 20%;
+  width: 250px;
+  height: 200px;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  padding: 10px;
   border-radius: 20px;
   margin: 0px 20px ;
   text-align: center;
@@ -199,4 +212,110 @@ footer h1{
 }
 .card p{
   padding-bottom: 30%;
+}
+
+
+
+@media only screen and (max-width:1070px) {
+
+  .top-section .left-section{
+
+      width: 50%;
+    
+    }
+    
+.top-section .left-section h1{
+  
+  font-size: 2rem;
+  width: 80%;
+  
+
+}
+.top-section .left-section p{
+  color: white;
+  font-size: .7rem;
+  width: 80%;
+
+  
+}
+.middle-section .left-section{
+  width: 45%;
+}
+
+.middle-section .right-section h1{
+
+  font-size: 1.5rem;
+  /* padding-bottom: 20px; */
+
+}
+.point div h4{
+  padding-bottom: 3px;
+}
+
+.point div p{
+  font-size: 13px;
+  width: 90%;
+}
+
+
+
+
+}
+@media only screen and (max-width:700px) {
+  .nav-menu,.button{
+      display: none;
+  }
+  .ham{
+      display: inline-block;
+  }
+
+  .top-section{
+      flex-direction: column-reverse;
+      text-align: center;
+      gap: 10%;
+  }
+  .top-section .left-section{
+      width: 95%;
+  }
+  .top-section .left-section h1{
+  
+      font-size: 2.5rem;
+      width: 100%;
+      
+    
+    }
+    .top-section .left-section p{
+      color: white;
+      font-size: 1rem;
+      width: 100%;
+      line-height: 1.3rem;
+  
+      
+    }
+    .top-section .right-section{
+      width: 80%;
+    }
+
+    .middle-section{
+      flex-direction: column;
+    }
+    .middle-section .left-section{
+      width: 80%;
+    }
+    .middle-section .right-section{
+      width: 90%;
+    }
+    
+.point div p{
+  width: 100%;    
+}
+.card{
+  /* width: 400px; */
+}
+    
+footer h1{
+  font-size: 1.5rem;
+}
+    
+
 }
